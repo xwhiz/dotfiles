@@ -14,10 +14,14 @@ for_window [class="^.*"] border pixel 1
 set $mod Mod1
 # set $mod Mod1
 
+exec --no-startup-id systemd-inhibit --mode=handle-lid-switch -- lid_switch_state=ignore
+
 exec --no-startup-id picom
 exec --no-startup-id feh --bg-scale ~/backgrounds/nice-blue-background.png
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
+
+exec --no-startup-id xrandr --output HDMI-1-0 --auto
 
 # kill any hanging polybar processes
 exec_always killall polybar
