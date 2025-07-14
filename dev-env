@@ -41,4 +41,5 @@ stow_dir() {
 }
 
 rm -rf ~/.tmux*
+rm -rf ~/.config/starship.toml
 stow_dir ~/dotfiles/config
