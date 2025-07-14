@@ -40,6 +40,11 @@ stow_dir() {
     popd
 }
 
-rm -rf ~/.tmux*
-rm -rf ~/.config/starship.toml
+if [[ $dry == "0" ]]; then
+	rm -rf ~/.tmux*
+	rm -rf ~/.config/starship.toml
+fi
 stow_dir ~/dotfiles/config
+
+execute rm -rf $HOME/.local/scripts
+execute stow -d . -t $HOME/.local .local
