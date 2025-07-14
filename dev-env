@@ -33,8 +33,8 @@ stow_dir() {
 
     dirs=$(find . -maxdepth 1 -mindepth 1 -type d)
     for dir in $dirs; do
-        execute stow -d . -t ~/ -D ${dir:2}
-        execute stow -d . -t ~/ -R ${dir:2}
+	execute rm -rf ~/.config/${dir:2} 
+        execute stow -d . -t ~/ ${dir:2}
     done
 
     popd
