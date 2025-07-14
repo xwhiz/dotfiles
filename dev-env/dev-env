@@ -27,3 +27,17 @@ execute() {
 }
 
 log "--------------- dev-env ---------------"
+
+stow_dir() {
+    pushd $1
+
+    dirs=$(find . -maxdepth 1 -mindepth 1 -type d)
+    for dir in $dirs; do
+        execute stow -D $dir
+        execute stow $dir
+    done
+
+    popd
+}
+
+stow_dir ~/dotfiles
