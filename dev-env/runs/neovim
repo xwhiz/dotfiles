@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+git clone -b 0.10.1 https://github.com/neovim/neovim.git $HOME/personal/neovim
+
+# sudo apt install cmake gettext lua5.1 liblua5.1-0-dev
+brew install cmake gettext lua@5.3
+
+cd $HOME/personal/neovim
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install
+
