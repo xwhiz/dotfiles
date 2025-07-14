@@ -33,11 +33,11 @@ stow_dir() {
 
     dirs=$(find . -maxdepth 1 -mindepth 1 -type d)
     for dir in $dirs; do
-        execute stow -D $dir
-        execute stow $dir
+        execute stow -D ${dir:2}
+        execute stow ${dir:2}
     done
 
     popd
 }
 
-stow_dir ~/dotfiles
+stow_dir ~/dotfiles/config
