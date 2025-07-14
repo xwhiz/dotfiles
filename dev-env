@@ -40,4 +40,5 @@ stow_dir() {
     popd
 }
 
+rm -rf ~/.tmux*
 stow_dir ~/dotfiles/config
