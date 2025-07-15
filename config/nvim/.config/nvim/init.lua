@@ -63,6 +63,7 @@ require('lazy').setup({
   require 'xwhiz.plugins.comment',
   require 'xwhiz.plugins.telescope',
   require 'xwhiz.plugins.lazydev',
+  require 'xwhiz.plugins.mini-vim',
   require 'xwhiz.plugins.typescript-tools',
   require 'xwhiz.plugins.nvim-lspconfig',
   require 'xwhiz.plugins.conform',
@@ -70,6 +71,9 @@ require('lazy').setup({
   require 'xwhiz.plugins.theme',
   require 'xwhiz.plugins.todo-comment',
   require 'xwhiz.plugins.treesitter-nvim',
+  require 'xwhiz.plugins.harpoon',
+  require 'xwhiz.plugins.undotree',
+  require 'xwhiz.plugins.vim-fugitive',
 
   require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
