@@ -16,5 +16,4 @@ yes | nvm install 18
 
 yes | curl -LsSf https://astral.sh/uv/install.sh | bash
 
-# stow config
 
