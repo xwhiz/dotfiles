@@ -13,8 +13,18 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Go up and center' })
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Go to next and center' })
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Go to prev and center' })
 
-vim.keymap.set('v', 'J', "m: '>+1<CR>gv=gv", { desc = 'Move selected code down' })
-vim.keymap.set('v', 'K', "m: '<-2<CR>gv=gv", { desc = 'Move selected code down' })
+vim.keymap.set('v', '<S-j>', ":m '>+1<CR>gv=gv", { desc = 'Move selected code down' })
+vim.keymap.set('v', '<S-k>', ":m '<-2<CR>gv=gv", { desc = 'Move selected code up' })
+
+vim.keymap.set('x', '<leader>p', '"_dP', { desc = "Paste content but don't lose the copied thing" })
+
+vim.keymap.set('n', '<leader>p', '"_d', { desc = 'Delete without yanking' })
+vim.keymap.set('v', '<leader>p', '"_d', { desc = 'Delete without yanking' })
+
+vim.keymap.set('n', '<S-q>', '<nop>', { desc = 'Do nothing' })
+vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>', { desc = 'Open new tmux session and then close' })
+
+vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %', { desc = 'Make current file executable' })
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
