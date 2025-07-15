@@ -2,7 +2,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- [[ My Keymaps ]]
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Run :Ex (Open netrw)' })
 vim.keymap.set('n', '<C-_>', function()
   require('Comment.api').toggle.linewise.current()
 end, { noremap = true, silent = true, desc = 'Toggle comment of current line' })
