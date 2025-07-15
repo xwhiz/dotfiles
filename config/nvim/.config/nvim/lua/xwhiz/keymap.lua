@@ -7,6 +7,15 @@ vim.keymap.set('n', '<C-_>', function()
   require('Comment.api').toggle.linewise.current()
 end, { noremap = true, silent = true, desc = 'Toggle comment of current line' })
 
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'Open up [U]ndotree' })
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Go down and center' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Go up and center' })
+vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Go to next and center' })
+vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Go to prev and center' })
+
+vim.keymap.set('v', 'J', "m: '>+1<CR>gv=gv", { desc = 'Move selected code down' })
+vim.keymap.set('v', 'K', "m: '<-2<CR>gv=gv", { desc = 'Move selected code down' })
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
