@@ -31,11 +31,12 @@ return {
     formatters_by_ft = {
       lua = { 'stylua' },
       python = { 'isort', 'black' },
-      javascript = { 'biome', 'prettierd', 'prettier', stop_after_first = true },
-      typescript = { 'biome', 'prettierd', 'prettier', stop_after_first = true },
-      html = { 'biome', 'prettierd', 'prettier', stop_after_first = true },
-      css = { 'biome', 'prettierd', 'prettier', stop_after_first = true },
-      scss = { 'biome', 'prettierd', 'prettier', stop_after_first = true },
+      javascript = { 'prettier', 'prettierd', 'biome', stop_after_first = true },
+      typescript = { 'prettier', 'prettierd', 'biome', stop_after_first = true },
+      html = { 'prettier', 'prettierd', 'biome', stop_after_first = true },
+      css = { 'prettier', 'prettierd', 'biome', stop_after_first = true },
+      scss = { 'prettier', 'prettierd', 'biome', stop_after_first = true },
+      swift = { 'xcbeautify' },
     },
   },
 }
