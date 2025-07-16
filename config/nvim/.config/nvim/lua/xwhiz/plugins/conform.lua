@@ -36,7 +36,6 @@ return {
       html = { 'prettier', 'prettierd', 'biome', stop_after_first = true },
       css = { 'prettier', 'prettierd', 'biome', stop_after_first = true },
       scss = { 'prettier', 'prettierd', 'biome', stop_after_first = true },
-      swift = { 'xcbeautify' },
     },
   },
 }
