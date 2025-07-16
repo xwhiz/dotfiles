@@ -64,7 +64,7 @@ require('lazy').setup({
   require 'xwhiz.plugins.telescope',
   require 'xwhiz.plugins.lazydev',
   require 'xwhiz.plugins.mini-vim',
-  require 'xwhiz.plugins.typescript-tools',
+  -- require 'xwhiz.plugins.typescript-tools',
   require 'xwhiz.plugins.nvim-lspconfig',
   require 'xwhiz.plugins.conform',
   require 'xwhiz.plugins.blink',
@@ -74,6 +74,11 @@ require('lazy').setup({
   require 'xwhiz.plugins.harpoon',
   require 'xwhiz.plugins.undotree',
   require 'xwhiz.plugins.vim-fugitive',
+
+  {
+    'augmentcode/augment.vim',
+    config = function() end,
+  },
 
   require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',

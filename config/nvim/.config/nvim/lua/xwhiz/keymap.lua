@@ -18,13 +18,16 @@ vim.keymap.set('v', '<S-k>', ":m '<-2<CR>gv=gv", { desc = 'Move selected code up
 
 vim.keymap.set('x', '<leader>p', '"_dP', { desc = "Paste content but don't lose the copied thing" })
 
-vim.keymap.set('n', '<leader>p', '"_d', { desc = 'Delete without yanking' })
-vim.keymap.set('v', '<leader>p', '"_d', { desc = 'Delete without yanking' })
+vim.keymap.set('n', '<leader>d', '"_d', { desc = 'Delete without yanking' })
+vim.keymap.set('v', '<leader>d', '"_d', { desc = 'Delete without yanking' })
 
 vim.keymap.set('n', '<S-q>', '<nop>', { desc = 'Do nothing' })
 vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>', { desc = 'Open new tmux session and then close' })
 
 vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %', { desc = 'Make current file executable' })
+
+-- Augment remap
+vim.keymap.set('i', '<C-y>', '<cmd>call augment#Accept()<CR>', { desc = 'Accept augment' })
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`

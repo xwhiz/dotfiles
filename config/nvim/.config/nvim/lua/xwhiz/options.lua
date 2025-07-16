@@ -13,7 +13,8 @@ vim.o.expandtab = true
 
 vim.o.smartindent = true
 
-vim.o.wrap = false
+vim.o.wrap = true
+vim.o.wrapmargin = 0
 
 vim.o.swapfile = false
 vim.o.backup = false
