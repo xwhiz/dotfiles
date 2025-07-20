@@ -5,7 +5,16 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Run :Ex (Open netrw)' })
 vim.keymap.set('n', '<C-_>', function()
   require('Comment.api').toggle.linewise.current()
+  vim.cmd 'normal! j'
 end, { noremap = true, silent = true, desc = 'Toggle comment of current line' })
+
+vim.keymap.set('n', '<leader>/', function()
+  vim.api.nvim_feedkeys('gcc', 'x', true)
+end, { desc = 'Toggle Line Comment' })
+
+vim.keymap.set('v', '<leader>/', function()
+  vim.api.nvim_feedkeys('gb', 'v', true)
+end, { desc = 'Toggle Line Comment' })
 
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'Open up [U]ndotree' })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Go down and center' })
